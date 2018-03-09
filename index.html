@@ -194,6 +194,7 @@
             <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
               <input id="subscribe-email" type="email" name="email" placeholder="Электронная почта">
+              <button class="button" type="submit">Отправить</button>
             </form>
           </div>
         </section>
@@ -254,18 +255,12 @@
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="visually-hidden" for="feedback-name">Ваше имя</label>
-          <input id="feedback-name" type="text" name="name" value="" placeholder="Как вас зовут?">
-        </p>
-        <p>
-          <label class="visually-hidden" for="feedback-email">Ваша электронная почта</label>
-          <input id="feedback-email" type="email" name="email" value="" placeholder="Ваша почта для ответа?">
-        </p>
-        <p>
-          <label class="visually-hidden" for="feedback-text">Текст обращения</label>
-          <textarea id="feedback-text" name="text" placeholder="Напишите что-нибудь..."></textarea>
-        </p>
+        <label class="visually-hidden" for="feedback-name">Ваше имя</label>
+        <input id="feedback-name" type="text" name="name" value="" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="feedback-email">Ваша электронная почта</label>
+        <input id="feedback-email" type="email" name="email" value="" placeholder="Ваша почта для ответа?">
+        <label class="visually-hidden" for="feedback-text">Текст обращения</label>
+        <textarea id="feedback-text" name="text" placeholder="Напишите что-нибудь..."></textarea>
         <button class="button" type="submit">Отправить</button>
       </form> 
       <button class="modal-close" type="button">Закрыть</button>
