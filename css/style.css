@@ -135,15 +135,17 @@ a.dark:active {
   list-style: none;
   font-size:14px;
   line-height: 16px;
+  color: #323232;
 }
 
-.user-navigation li {
+.user-navigation-popup {
   color: #323232;
   background-color: #f8f7f4;
 }
 
 .user-navigation-link {
   text-decoration:none;
+  color:#ffffff;
   border-radius:16px;
   background-color: rgba(255, 255, 255, 0.2);
 }
