@@ -122,9 +122,9 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 385px;
-  min-height:75px;
+  min-height: 75px;
   margin: 0;
-  padding:0;
+  padding: 0;
   list-style: none;
   font-size: 16px;
   font-weight: 700;
@@ -135,24 +135,24 @@ body {
 .site-navigation-link:hover {
   color: #333333;
   text-decoration: none;
-  padding:8px 14px;
+  padding: 8px 14px;
 
   background-color: #ffffff;
-  border:none;
+  border: none;
   border-radius: 18px;
 }
 
 .site-navigation-link:active {
-  border:none;
+  border: none;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0px #696969;
-  padding:8px 14px;
+  padding: 8px 14px;
 }
 
 .site-navigation-current {
   background-color: #d07058;
   border-radius: 16px;
-  padding:8px 14px;
+  padding: 8px 14px;
 }
 
 .sub-navigation {
@@ -303,7 +303,7 @@ body {
 }
 
 .slider {
-  position:relative;
+  position: relative;
 }
 
 .slide {
@@ -340,18 +340,18 @@ body {
 .slide-button {
   align-self: center;
   padding: 10px 40px;
-  margin-top:25px;
+  margin-top: 25px;
   font-size: 32px;
   line-height: 44px;
-  border-radius:32px;
+  border-radius: 32px;
 } 
 
 .slider-controls {
-  position:absolute;
-  bottom:60px;
-  display:flex;
-  justify-content:space-between;
-  width:80px;
+  position: absolute;
+  bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -394,7 +394,7 @@ body {
 .banner-item {
   width: 560px;
   min-height: 229px;
-  border-radius:15px;
+  border-radius: 15px;
 }
 
 .banner-item:first-child {
@@ -421,60 +421,68 @@ body {
 }
 
 .catalog-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
   width: 293px;
-  height:365px;
+  height: 365px;
 }
 
-.catalog-item:hover {
+.catalog-item-content {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 293px;
-  height: 405px;
-  background-color: rgba(255, 255, 255, 0.2);
+  min-height: 405px;
   border-radius: 5px;
-  z-index: 2;
 }
 
-.product-button {
+.catalog-item:hover .catalog-item-content,
+.catalog-item:focus .catalog-item-content {
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index:2;
+}
+
+.catalog-item-button {
   display: none;
-  order:2;
-  margin-top: 10px;
+  order: 2;
+  align-self: center;
+  padding: 11px 17px;
+  margin-top: auto;
   margin-bottom: 20px;
-  padding: 11px;
-  width: 200px;
-  height: 44px;
+  border-radius:22px;
 }
 
-.catalog-item:hover .product-button,
-.catalog-item:focus .product-button {
+.catalog-item:hover .catalog-item-button,
+.catalog-item:focus .catalog-item-button {
   display: block;
 }
 
 .catalog-item h3 {
   width: 258px;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
+  margin-top:15px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
-  order:1;
+  order: 1;
 }
 
 .catalog-item img {
   width: 267px;
   height: 267px;
-  margin-top:5px;
-  margin-bottom:15px;
+  margin-top: 5px;
   border-radius: 50%;
-  order:0;
+  order: 0;
 }
 
 .catalog-item-price {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   position: absolute;
   top: 200px;
   left: 0;
@@ -485,10 +493,6 @@ body {
 
 .catalog-item-price span {
   font-size: 30px;
-}
-
-.catalog-item:hover .catalog-item-price {
-  position: absolute;
 }
 
 .features {
@@ -627,7 +631,7 @@ body {
 .catalog-page .container {
   display: flex;
   flex-direction: column;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .catalog-container {
@@ -639,7 +643,7 @@ body {
 .page-title {
   margin: 0;
   padding: 0;
-  margin-bottom:25px;
+  margin-bottom: 25px;
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
@@ -649,7 +653,7 @@ body {
   order:-1;
   padding: 0;
   margin: 0;
-  margin-bottom:5px;
+  margin-bottom: 5px;
   margin-top:-14px;
   list-style: none;
   font-size: 14px;
@@ -658,14 +662,14 @@ body {
 }
 
 .filters {
-  margin-bottom:35px;
+  margin-bottom: 35px;
 }
 
 .form-filter {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width:860px;
+  width: 860px;
   font-size: 16px;
   line-height: 18px;
 }
@@ -679,7 +683,7 @@ body {
 .form-filter legend {
   font-size: 14px;
   line-height: 16px;
-  margin:7px;
+  margin: 7px;
 }
 
 .form-filter select,
@@ -714,12 +718,12 @@ body {
 }
 
 .page-navigation {
- margin-bottom:30px;
+ margin-bottom: 30px;
 }
 
 .pagination-list {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
