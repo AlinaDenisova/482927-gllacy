@@ -96,7 +96,7 @@
                     </a>
                   </td>
                   <td class="basket-item-title">
-                    <a class="dark-link" href="#">Пломбир с апельсиновым джемом</a>
+                    <a href="#">Пломбир с апельсиновым джемом</a>
                   </td>
                   <td class="basket-item-count">
                     1,5кг x <span>200 руб.</span>
@@ -115,7 +115,7 @@
                     </a>
                   </td>
                   <td class="basket-item-title">
-                    <a class="dark-link" href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+                    <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
                   </td>
                   <td class="basket-item-count">
                     1,5кг x <span>300 руб.</span>
@@ -162,16 +162,18 @@
             <form class="form-filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset>
                 <legend>Сортировка:</legend>
+                <div class="form-filter-wrapper form-filter-select-wrapper" tabindex="10">
                 <select name="sort">
                   <option class="form-label-filter" value="popular">по популярности</option>
                   <option class="form-label-filter" value="cheap">сначала недорогие</option>
                   <option class="form-label-filter" value="expensive">сначала дорогие</option>
                   <option class="form-label-filter" value="fat">по жирности</option>
                 </select>
+                </div>
               </fieldset>
               <fieldset>
                 <legend>Цена:</legend>
-                  <div class="filter-range">
+                  <div class="filter-range ">
                     <div class="price-controls">
                       <label class="min-price"><input type="text" name="min-price" value="100">руб. -</label>
                       <label class="max-price"><input type="text" name="max-price" value="500"> руб.</label>
@@ -189,6 +191,7 @@
               </fieldset>
               <fieldset>
                 <legend>Жирность:</legend>
+                <div class="form-filter-wrapper">
                 <input class="visually-hidden form-input form-input-radio" id="0" type="radio" name="fat" value="0">
                 <label class="form-label-filter" for="0">0%</label>
                 <input class="visually-hidden form-input form-input-radio" id="<=10" type="radio" name="fat" value="<=10" checked>
@@ -197,9 +200,11 @@
                 <label class="form-label-filter" for="<=30">до 30%</label>
                 <input class="visually-hidden form-input form-input-radio" id=">30" type="radio" name="fat" value=">30">
                 <label class="form-label-filter" for=">30">выше 30%</label>
+              </div>
               </fieldset>
               <fieldset>
                 <legend>Наполнители:</legend>
+              <div class="form-filter-wrapper">
                 <input class="visually-hidden form-input form-input-checkbox" id="chocolate" type="checkbox" name="chocolate" checked>
                 <label class="form-label-filter" for="chocolate">шоколадные</label>
                 <input class="visually-hidden form-input form-input-checkbox" id="sugar" type="checkbox" name="sugar" checked>
@@ -211,6 +216,7 @@
                 <input class="visually-hidden form-input form-input-checkbox" id="jam" type="checkbox" name="jam">
                 <label class="form-label-filter" for="jam">джемы</label>          
               </fieldset>
+            </div>
               <button type="submit" class="filter-button">Применить</button>
             </form>
           </section>

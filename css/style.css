@@ -231,7 +231,8 @@ input[type="radio"].visually-hidden {
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  width: 380px;
+  min-width: 380px;
+  max-width: 450px
   margin: 0;
   padding: 0;
   margin-right: auto;
@@ -367,7 +368,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  width: 260px;
+  min-width: 260px;
+  max-width: 330px;
   margin: 0;
   margin-left: auto;
   list-style: none;
@@ -423,6 +425,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation-popup {
+  box-sizing: border-box;
   display: none;
   position: absolute;
   top: 40px;
@@ -497,16 +500,23 @@ input[type="radio"].visually-hidden {
 }
 
 .basket-table {
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-spacing: none;
   border: none;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
 }
 
-.basket-table tr {
-  min-height: 31px;
+.basket-table th {
+  min-height: 33px;
 }
 
 .basket-table td {
-  box-sizing: border-box;
+  padding: 0;
   padding-right: 15px;
+  vertical-align: top;
 }
 
 .basket-table td:last-child {
@@ -515,6 +525,8 @@ input[type="radio"].visually-hidden {
 
 .basket-item-delete {
   position: relative;
+  padding-top: 10px;
+  width:26px;
 }
 
 .button-item-delete {
@@ -542,26 +554,51 @@ input[type="radio"].visually-hidden {
   transform: rotate(-45deg);
 }
 
-.basket-item-title {
-  width: 230px;
+.basket-item-image {
+  width: 48px;
 }
 
-.basket-item-count,
-.basket-item-price {
-  text-align: center;
+.basket-item-image img {
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+}
+
+.basket-item-title {
+  width: 230px;
+  padding-top: 10px;
+}
+
+.basket-item-title a {
+  text-decoration: none;
+  color:#323232;
+}
+
+.basket-item-title a:hover,
+.basket-item-title a:focus,
+.basket-item-title a:active {
+  color: #e84d37;
 }
 
 .basket-item-count {
   width: 125px;
+  padding-top: 10px;
+  text-align: right;
+}
+
+.basket-item-count span {
+  color: #999999;
 }
 
 .basket-item-price {
-  width: 80px;
+  width: 70px;
+  padding-top: 10px;
+  text-align: right;
 }
 
-.basket-link-full {
-  color: #323232;
-  background-color: #f8f7f4;
+.basket-price-total {
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .form {
@@ -595,40 +632,6 @@ input[type="radio"].visually-hidden {
 .form textarea:focus {
   border: 2px solid #8fbdec;
 }*/
-
-.basket-link-tooltip {
-  width: 540px;
-}
-
-.basket-table {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-.basket-item-image img {
-  border-radius: 50%;
-}
-
-.basket-item-title a {
-  text-decoration: none;
-  color:#323232;
-}
-
-.basket-item-title a:hover,
-.basket-item-title a:focus,
-.basket-item-title a:active {
-  color: #e84d37;
-}
-
-.basket-item-count span {
-  color: #999999;
-}
-
-.basket-price-total {
-  font-size: 15px;
-  line-height: 18px;
-}
 
 .header-contacts {
   margin-left: auto;
@@ -1295,11 +1298,6 @@ input[type="radio"].visually-hidden {
   z-index: 3;
 }
 
-.contacts-button:active .modal-feedback,
-.contacts-button:active .overlay {
-  display: block;
-}
-
 .inner-page {
   background-image: url("../img/backlight.png");
   background-repeat: repeat-x;
@@ -1382,6 +1380,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  font:inherit;
   width: 860px;
   font-size: 16px;
   line-height: 18px;
@@ -1390,8 +1389,6 @@ input[type="radio"].visually-hidden {
 .form-filter fieldset {
   height: 58px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 18px;
 }
 
 .form-filter legend {
@@ -1399,6 +1396,56 @@ input[type="radio"].visually-hidden {
   line-height: 16px;
   margin-bottom: 7px;
   margin-left: 16px;
+}
+
+.form-filter-wrapper {
+  min-height: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+}
+
+.form-filter-select-wrapper {
+  font: inherit;
+  width: 193px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-filter-select-wrapper::after {
+  content:"";
+  position: absolute;
+  top: 13px;
+  left: 169px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 11px 5.5px 0 5.5px;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.form-filter-select-wrapper:hover::after {
+  border-color: #323232 transparent transparent transparent; 
+}
+
+.form-filter select {
+  width: 182px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: transparent;
+  border-style: none;
+  outline:none;
+  color: #ffffff;
+  padding-left: 15px;
+}
+
+.form-filter select:hover {
+  color: #323232;
+}
+
+.form-filter-select-wrapper:focus {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .price-controls {
