@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -57,7 +57,7 @@
                 <form class="form search-form" action="https://echo.htmlacademy.ru" method="post">
                   <label class="form-label visually-hidden" for="user-search">Поиск</label>
                   <input class="form-input-field" id="user-search" type="search" name="search" placeholder="Что ищем?">
-                  <button class="button visually-hidden" type="submit">Отправить</button>  
+                  <button class="search-form-button visually-hidden" type="submit">Отправить</button>  
                 </form>
               </div>
             </li>
@@ -68,16 +68,18 @@
               </a>
               <div class="user-navigation-popup login-link-tooltip">
                 <h2 class="visually-hidden">Личный кабинет</h2>
-                <form class="form login-form" action="https://echo.htmlacademy.ru" method="post">
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                   <label class="form-label visually-hidden" for="user-login">Электронная почта</label>
                   <input class="form-input-field" id="user-login" type="email" name="login" placeholder="Электронная почта">
                   <label class="form-label visually-hidden" for="user-password">Пароль</label>
                   <input class="form-input-field" id="user-password" type="password" name="password" placeholder="Пароль">
-                  <p class="login-form-links">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </p>
-                  <button class="button login-form-button" type="submit">Войти</button>
+                  <div class="login-form-row">
+                    <p class="login-form-links">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </p>
+                    <button class="button login-form-button" type="submit">Войти</button>
+                  </div>
                 </form>
               </div>
             </li>
