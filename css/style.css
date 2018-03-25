@@ -880,6 +880,10 @@ input[type="radio"].visually-hidden {
   padding: 0 13px;
 }
 
+.catalog {
+  margin-bottom: 5px;
+}
+
 .catalog-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1825,8 +1829,8 @@ input[type="radio"].visually-hidden {
   right:-25px;
 }
 
-.pagination-button:disabled,
-.pagination-button.disabled {
+.pagination-button:disabled::before,
+.pagination-button.disabled::before {
   cursor: default;
   opacity: 0.2;
 }
