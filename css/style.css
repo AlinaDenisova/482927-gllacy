@@ -1531,9 +1531,10 @@ input[type="radio"].visually-hidden {
   width: 0px;
   height: 0px;
   border-style: solid;
+  background-color: transparent;
   border-width: 11px 5.5px 0 5.5px;
   border-color: #ffffff transparent transparent transparent;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .filter-select-wrapper:hover::after {
@@ -1546,15 +1547,18 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-select {
-  width: 184px;
+  width: 193px;
   height: 36px;
   border-radius: 18px;
   background-color: transparent;
   border-style: none;
   outline: none;
-  color: #ffffff;
   padding-left: 15px;
+  color: #ffffff;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .filter-select:hover {
@@ -1563,6 +1567,7 @@ input[type="radio"].visually-hidden {
 
 .filter-select option {
   color: #000000;
+  background-color: #ffffff;
 }
 
 .filter-range-label {
