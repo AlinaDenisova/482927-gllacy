@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -234,7 +234,7 @@
 
         <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <div class="map"></div>
+          <div class="map" id="map"></div>
           <div class="contacts-info">
             <div class="contacts-address">
               <p>Адрес главного офиса<br>
@@ -302,14 +302,14 @@
       </footer>
 
       <div class="overlay"></div>
-      <section class="modal modal-feedback">
+      <section class="modal-feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <p>Мы обязательно вам ответим!</p>
-        <form class="form feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="form-label visually-hidden" for="feedback-name">Ваше имя</label>
-          <input class="form-input-field" id="feedback-name" type="text" name="name" value="" placeholder="Как вас зовут?">
+          <input class="form-input-field" id="feedback-name" type="text" name="name" placeholder="Как вас зовут?">
           <label class="form-label visually-hidden" for="feedback-email">Ваша электронная почта</label>
-          <input class="form-input-field" id="feedback-email" type="email" name="email" value="" placeholder="Ваша почта для ответа?">
+          <input class="form-input-field" id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
           <label class="form-label visually-hidden" for="feedback-text">Текст обращения</label>
           <textarea class="form-textarea-field" id="feedback-text" name="text" placeholder="Напишите что-нибудь..."></textarea>
           <button class="button feedback-form-button" type="submit">Отправить</button>
@@ -317,5 +317,9 @@
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </section>
     </div>
+      <script src="js/script.js"></script>
+    <!-- <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdibyID8p4mef8VL189j43LvTFOm_QpI&callback=initMap">
+    </script> -->
   </body>
 </html>
