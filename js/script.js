@@ -151,13 +151,14 @@ function initMap() {
         zoom: 16
   };
   var map = new google.maps.Map(document.querySelector(".map"), mapOptions);
-  var addressLatLng = new google.maps.LatLng(59.938961, 30.323105);
+  var addressLatLng = new google.maps.LatLng(59.938827, 30.323073);
 
+  var isIE11 = !!(navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/));
   var marker = new google.maps.Marker({
     position: addressLatLng,
     map: map,
     title: "ул. Большая Конюшенная 19/8, Санкт-Петербург",
-    icon: "img/pin.png"
+    icon: isIE11 ? "img/pin.png" : "img/pin.svg"
   });
 }
 

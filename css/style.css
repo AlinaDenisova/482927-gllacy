@@ -180,6 +180,10 @@ input[type="radio"].visually-hidden {
           box-shadow: inset 0px 2px 2px 0px #942718;
 }
 
+.form-label.visually-hidden:active {
+  display:none;
+}
+
 .form-input-field,
 .form-textarea-field {
   -webkit-box-sizing: border-box;
@@ -219,8 +223,8 @@ input[type="radio"].visually-hidden {
 }
 
 .form-input-field:-ms-input-placeholder,
-.form-textarea-field:-moz-placeholder {
-  font-weight: 700;
+.form-textarea-field:-ms-input-placeholder {
+  font-weight: 400;
 }
 
 .form-input-field:hover,
@@ -673,12 +677,7 @@ input[type="radio"].visually-hidden {
   width: 33px;
 }
 
-.basket-item-image a {
-  display: block;
-}
-
 .basket-item-image img {
-  display: block;
   border-radius: 50%;
   width: 33px;
   height: 33px;
@@ -730,9 +729,11 @@ input[type="radio"].visually-hidden {
 }
 
 .button-basket {
+  max-width: 172px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
   border-radius: 24px;
 }
 
@@ -859,6 +860,9 @@ input[type="radio"].visually-hidden {
           flex-direction: column;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-align:stretch;
+      -ms-flex-align:stretch;
+          align-items:stretch;
   padding: 17px 20px 22px;
   width: 560px;
   min-height: 229px;
@@ -868,12 +872,16 @@ input[type="radio"].visually-hidden {
 .banner-item:first-child {
   background-color: #73172b;
   background-image: url("../img/banner-raspberry.jpg");
+  background-size: cover;
+  background-position: center top;
   color: #ffffff;
 }
 
 .banner-item:last-child {
   background-color: #3a2217;
   background-image: url("../img/banner-chocolate.jpg");
+  background-size: cover;
+  background-position: center top;
   color: #ffffff;
 }
 
@@ -890,6 +898,7 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
+  padding-bottom: 25px;
 }
 
 .banner-button {
@@ -994,7 +1003,9 @@ input[type="radio"].visually-hidden {
   width: 258px;
   margin: 0;
   padding: 0;
+  min-height: 44px;
   margin-top: 15px;
+  margin-bottom:10px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -1004,22 +1015,21 @@ input[type="radio"].visually-hidden {
           order: 1;
 }
 
-.catalog-item h3 .catalog-item-link {
+.catalog-item-link {
   color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.catalog-item h3 .catalog-item-link:hover,
-.catalog-item h3 .catalog-item-link:focus,
-.catalog-item h3 .catalog-item-link:active {
+.catalog-item-link:hover,
+.catalog-item-link:focus,
+.catalog-item-link:active {
   color: #ffbc9e;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
 .catalog-item img {
-  display: block;
   width: 267px;
   height: 267px;
   margin-top: 5px;
@@ -1041,22 +1051,21 @@ input[type="radio"].visually-hidden {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.catalog-item-price::before {
-  content:"";
-  width: 27px;
-  height: 31px;
-  position: absolute;
-  top: 6px;
-  left: 82px;
+.catalog-item-price .rub {
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 0;
+  width: 36px;
+  height: 33px;
   background-image: url("../img/ruble.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: 31px 33px;
+  background-position: center;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item-price .kilo {
   font-size: 30px;
-  padding-left: 37px;
 }
 
 .features {
@@ -1106,6 +1115,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feature-item img  {
+  min-width: 49px;
   width: 49px;
   height: 49px;
   border-radius: 50%;
@@ -1149,6 +1159,8 @@ input[type="radio"].visually-hidden {
   color: #323232;
   background-color: #ffffff;
   background-image: url("../img/new-post.jpg");
+  background-size: 100% 100%;
+  background-position: left bottom;
   border-radius: 15px;
 }
 
@@ -1218,6 +1230,14 @@ input[type="radio"].visually-hidden {
 }
 
 .subscribe-block-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 550px;
   padding: 30px 20px 35px;
   color: #5a5a5a;
   background-color: #f8f7f4;
@@ -1231,6 +1251,13 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   line-height: 22px;
   vertical-align: middle;
+}
+
+.subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
 }
 
 .subscribe-block-button {
@@ -1312,6 +1339,7 @@ input[type="radio"].visually-hidden {
 
 .contacts-phone {
   line-height: 22px;
+  margin-bottom: 27px;
 }
 
 .contacts-text {
@@ -1441,6 +1469,16 @@ input[type="radio"].visually-hidden {
   margin-bottom: 20px;
 }
 
+.feedback-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .feedback-form .form-input-field {
   width: 268px;
   margin-bottom: 20px;
@@ -1453,7 +1491,9 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-form-button {
-  float: right;
+  max-width: 140px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding-left: 24px;
   padding-right: 24px;
   border-radius: 24px;
@@ -1612,6 +1652,10 @@ input[type="radio"].visually-hidden {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.filter-select::-ms-expand {
+display: none;
 }
 
 .filter-select:hover,
@@ -2018,7 +2062,7 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   background-color: transparent;
   -webkit-box-shadow: inset 0px 2px 1px #888888;
-          box-shadow: inset 0px 2px 1px #888888;
+      box-shadow: inset 0px 2px 1px #888888;
 }
 
 .footer-info {
@@ -2065,7 +2109,11 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
-.footer-info b::before {
+.for-suppliers {
+  font-weight: 700;
+}
+
+.for-suppliers::before {
   content:"";
   width: 15px;
   height: 12px;
